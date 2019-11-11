@@ -7,4 +7,5 @@ ENV BODY="Please use BODY/TITLE/COLOR env variables"
 ENV COLOR=lightblue
 COPY start.sh /
 RUN chmod +x /start.sh
+EXPOSE 80
 CMD /start.sh
