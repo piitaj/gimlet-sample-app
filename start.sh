@@ -1,5 +1,6 @@
 #!/bin/bash
 
+[[ "$COLOR" =~ ^(rnd|random|RND|RANDOM)$ ]] && COLOR="#$(printf '%03x' $(($RANDOM % 4096)))"
 cat > /var/www/html/index.nginx-debian.html <<EOF
 <html>
 <body bgcolor="$COLOR">
