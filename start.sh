@@ -7,7 +7,7 @@ if [[ ! "$BODYSTYLE" ]]; then
   [ -z $COLOR2 ] || BODYSTYLE="background: linear-gradient(${COLOR}, 80%, ${COLOR2})"
 fi
 
-cat > /var/www/html/index.nginx-debian.html <<EOF
+cat > /usr/share/nginx/html/index.html <<EOF
 <html>
 <body style="${BODYSTYLE};">
 <h1>$TITLE</h1>

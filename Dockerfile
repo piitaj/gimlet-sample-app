@@ -1,6 +1,6 @@
-FROM ubuntu:18.04
-RUN apt-get update -qq
-RUN apt-get install -y nginx curl
+FROM nginx:1.23.3-alpine-slim
+RUN apk update && apk upgrade && \
+    apk add --no-cache bash git nginx curl
 ENV TITLE=Welcome
 ENV BODY="Please use BODY/TITLE/COLOR env variables"
 ENV COLOR=lightblue
