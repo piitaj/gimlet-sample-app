@@ -1,0 +1,20 @@
+app: gimlet-sample-app
+env: test2
+namespace: default
+chart:
+  repository: https://chart.onechart.dev
+  name: onechart
+  version: 0.41.0
+values:
+  gitRepository: piitaj/gimlet-sample-app
+  gitSha: '{{ .SHA }}'
+  image:
+    repository: ghcr.io/gimlet-io/gimlet-sample-app
+    tag: v1.0.0
+  vars:
+    COLOR: DeepPink
+    COLOR2: DarkOrange
+    TITLE: '"Hello from Gimlet"'
+strategicMergePatches: ""
+json6902Patches: []
+manifests: ""
